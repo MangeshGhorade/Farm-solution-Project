@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Connect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<style>
+    body{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    width: 100%;
+    height: 60px;
+    background-color: #59981A;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    font-family: "Poppins", sans-serif;
+}
+.search{
+    line-height: 60px;
+}
+#search{
+    padding: 6px 15px;
+    font-size: 16px;
+    width: 250px;
+    border-radius: 20px;
+}
+.fa-magnifying-glass{
+    font-size: 20px;
+    cursor: pointer;
+}
+.fcText{
+    position: relative;
+    bottom: 8px;
+    color: #ECF87F;
+}
+.login{
+    display: flex;
+    line-height: 60px;
+}
+#cart, #userInfo, #contact,#about,#logout{
+    margin-left: 2rem;
+    text-decoration: none;
+    color: black;
+}
+#cart:hover, #userInfo:hover, #contact:hover,#about:hover,#logout:hover{
+    text-decoration: underline;
+}
+.fa-solid{
+    margin-left: 0.3rem;
+}
+
+.content{
+    margin-top: 4rem;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+.content p{
+    text-align:justify;
+    margin: 1rem;
+}
+video{
+    display: block;
+    margin: auto;
+}
+.create{
+    padding: 5px 12px;
+    background-color:cadetblue;
+    border-radius: 20px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 2px 2px 5px black;
+    cursor: pointer;
+}
+.footer{
+    position: static;
+    bottom: 0;
+    background-color: #59981A;
+    margin-top: 1rem;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+}
+</style>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <h2 class="fcText">Farm Connect</h2>
+            <div class="search">
+                <input type="text" name="search" id="search" placeholder="search">
+                <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
+            </div>
+            <div class="login">
+                <a href="" id="userInfo"><%=user.name%><i class="fa-solid fa-circle-user"></i></a>
+                <a href="/home" id="logout">Log-out<i class="fa-solid fa-right-from-bracket"></i></a>
+                <a href="" id="cart">Cart<i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+        <div class="content">
+            <p>
+            </p>
+            <video controls>
+                <source src="soya" type="video/mp4">
+            </video>
+            <div class="community">
+                <form method="get" action="/login/<%=user.id %>/create">
+                    <h4>Join Our Farmer's Community!</h4>
+                    <button class="create">Create Post</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur asperiores maiores neque! Delectus sequi natus beatae in, perferendis, eius at recusandae optio, commodi minus aut impedit explicabo. Consequatur, excepturi vitae!
+        </div>
+    </div>
+</body>
+</html>

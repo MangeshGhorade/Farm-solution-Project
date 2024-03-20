@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Connect-Community Post</title>
+</head>
+<body>
+    <h2>Create your post here!</h2><br>
+    <form method="post" action="/login/<%=user.id%>/create/posts">
+        <p>Id : <%=user.id %></p>
+        <p>Username : @<%=user.name %></p>
+        <textarea name="content" id="content" cols="30" rows="10" placeholder="Enter your comment"></textarea>
+        <button>Post</button>
+    </form>
+</body>
+</html>
